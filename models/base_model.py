@@ -12,6 +12,10 @@ class BaseModel:
         """initialize id, created_at, updated_at"""
 
         time_form = "%Y-%m-%dT%H:%M:%S.%f"
+        
+        self.id = str(uuid4())
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
         if kwargs:
             for key, val in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
@@ -19,9 +23,7 @@ class BaseModel:
                 elif key == '__class__':
                     continue
         else:
-            self.id = str(uuid4())
-            self.created_at = datetime.today()
-            self.updated_at = datetime.today()
+            pass
 
     def save(self):
         """updates the updated_at public instance attribute"""
