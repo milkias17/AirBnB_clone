@@ -4,7 +4,6 @@ import models
 from uuid import uuid4
 from datetime import datetime
 
-
 class BaseModel:
     """parent class of AirBnB project"""
 
@@ -25,12 +24,12 @@ class BaseModel:
                 else:
                     self.__dict__[key] = val
         else:
-            pass
+            models.storage.new(self)
 
     def save(self):
         """updates the updated_at public instance attribute"""
         self.updated_at = datetime.today()
-
+        models.storage.save()
     def to_dict(self):
         """
         returns dictionary of key/value of __dict__
