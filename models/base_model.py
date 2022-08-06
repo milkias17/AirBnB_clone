@@ -21,7 +21,7 @@ class BaseModel:
                 if key == 'created_at' or key == 'updated_at':
                     self.__dict__[key] = datetime.strptime(val, time_form)
                 elif key == '__class__':
-                    continue
+                    self.__dict__[key] = val
         else:
             pass
 
