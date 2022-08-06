@@ -2,6 +2,8 @@
 """Connvert dictionary representation to a JSON string"""
 from models.base_model import BaseModel
 import json
+
+
 class FileStorage:
     """
     serializes instances to a JSON file
@@ -17,7 +19,8 @@ class FileStorage:
 
     def new(self, obj):
         """sets __objects"""
-        FileStorage.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
+        obcl_name = obj.__class__.__name__
+        FileStorage.__objects["{}.{}".format(obcl_name, obj.id)] = obj
 
     def save(self):
         """serializes to JSON file"""
@@ -25,6 +28,7 @@ class FileStorage:
         objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         with open(FileStorage.__file_path, "w") as f:
             json.dump(objdict, f)
+
     def reload(self):
         """deserializes JSON file"""
         try:

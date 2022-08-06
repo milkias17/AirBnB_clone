@@ -2,8 +2,8 @@
 """define all common attribute/method for other classes"""
 from datetime import datetime
 from uuid import uuid4
-
 import models
+
 
 class BaseModel:
     """parent class of AirBnB project"""
@@ -24,18 +24,17 @@ class BaseModel:
                 else:
                     self.__dict__[key] = val
         else:
-<<<<<<< HEAD
             models.storage.new(self)
-=======
+
             self.id = str(uuid4())
             self.created_at = datetime.today()
             self.updated_at = datetime.today()
->>>>>>> 232a49e33c6058450621f05c942a476799fd663a
 
     def save(self):
         """updates the updated_at public instance attribute"""
         self.updated_at = datetime.today()
         models.storage.save()
+
     def to_dict(self):
         """
         returns dictionary of key/value of __dict__
