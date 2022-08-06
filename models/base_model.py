@@ -12,7 +12,7 @@ class BaseModel:
         """initialize id, created_at, updated_at"""
 
         time_form = "%Y-%m-%dT%H:%M:%S.%f"
-        
+
         self.id = str(uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
@@ -44,4 +44,3 @@ class BaseModel:
     def __str__(self):
         """print in a format"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-        
