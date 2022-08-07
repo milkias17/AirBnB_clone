@@ -21,8 +21,9 @@ The console does the following tasks:
 	     - For non-interactive run echo "" | ./console.py
 
 
-     Examples
-	Command
+     		Examples
+		
+		Commands
 	Display commands help -> (hbnb) help
 	Create object (prints its id) -> (hbnb) create )
 	Destroy object -> (hbnb) destroy or (hbnb) .destroy()
