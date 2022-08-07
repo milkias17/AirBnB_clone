@@ -7,7 +7,6 @@
   Concepts to be covered are:
 
 		The Console
-
 The console does the following tasks:
 
     ->create your data model
@@ -16,7 +15,10 @@ The console does the following tasks:
 
 		Install and use
 
-	First clone "https://github.com/milkias17/AirBnB_clone"
-	Second access AirBnB directory
-	Next - For interactive run ./console
+	->First clone "https://github.com/milkias17/AirBnB_clone"
+	->Second access AirBnB directory
+	->Next - For interactive run ./console
 	     - For non-interactive run echo "" | ./console.py
+
+		Examples
+
