@@ -2,12 +2,17 @@
 
 - This is an airbnb clone
 
-The goal of the project is to deploy on your server a simple copy of the AirBnB website.
+  The project mainly focuses on creating and deploying copy for the airbnb website.
 
-		The console
-	create your data model
-	manage (create, update, destroy, etc) objects via a console / command interpreter
-	store and persist objects to a file (JSON file
+  Concepts to be covered are:
+
+		The Console
+
+The console does the following tasks:
+
+    ->create your data model
+    ->manage (create, update, destroy, etc) objects via a console / command interpreter
+    ->store and persist objects to a file (JSON file)
 
 		Install and use
 
