@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """defines multiplication"""
 
+
 def multiply(self, num1, num2):
     """gives the product of two integer numbers
-    
     Args:
     num1(int): the first number
     num2(int): the second number
